@@ -1,3 +1,4 @@
+# zad. 1
 # manualna klasyfikacja gatunków irysów
 
 import pandas as pd

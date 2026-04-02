@@ -1,3 +1,4 @@
+# zad. 1
 import datetime
 from math import sin, pi
 

@@ -1,3 +1,4 @@
+# zad. 3
 # uczenie maszynowe
 # sprawdzamy, który algorytm najlepiej poradzi sobie z klasyfikacją irysów.
 # porównanie metody drzewa, przez szukanie sąsiadów (k-NN)

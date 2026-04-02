@@ -1,3 +1,4 @@
+# zad. 3
 # Sprawdzam czy YOLO umie liczyć te latające obiekty - radzi sobie z tym bardzo słabo, ale wnioski są takie:
 
 # 1: miniaturki były stanowczo za małe dla YOLO. Powiększenie obrazu (preprocessing) było konieczne, ponieważ tak małe,

@@ -1,3 +1,4 @@
+# zad. 3
 import pandas as pd  # do pracy z danymi w formie tabelarycznej
 import matplotlib.pyplot as plt  # do tworzenia wykresow
 from sklearn.preprocessing import (

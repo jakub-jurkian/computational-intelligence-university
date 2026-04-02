@@ -1,3 +1,4 @@
+# zad. 1
 # W pierwszym zadaniu wykorzystałem model YOLO w wersji 8 Nano.
 # Wewnątrz opiera się on na architekturze CSPDarknet, która służy do wyciągania cech z obrazu.
 # Został on wytrenowany na popularnym zbiorze COCO, co oznacza, że potrafi rozpoznać 80 różnych klas obiektów codziennego użytku.

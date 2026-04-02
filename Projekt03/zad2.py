@@ -1,3 +1,4 @@
+# zad. 2
 # maszyna sama się uczy klasyfikować gatunki irysów za pomocą struktury drzewiastej.
 # Działanie -> Algo zadaje pytania o wymiary płatków i na podstawie odpowiedzi (tak/nie)
 # schodzi niżej, aż dotrze do konkretnego gatunku.

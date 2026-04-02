@@ -1,3 +1,4 @@
+# zad. 2
 # W zadaniu użyłem OpenCV. Ptaki na tych miniaturkach to w zasadzie tylko czarne plamy, więc problem to po prostu odcięcie tła (progowanie).
 
 # Zamiast szukać jednego uniwersalnego filtru, napisałem algorytm adaptacyjny.
