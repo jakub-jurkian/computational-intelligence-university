@@ -1,0 +1,40 @@
+project_name: cats-dogs-cnn
+experiment_name: cnn_sgd_baseline
+
+paths:
+  dataset_dir: data/raw/dogs-cats-mini
+  report_dir: reports/cnn_sgd_baseline
+  model_dir: models/cnn_sgd_baseline
+
+data:
+  class_names: [cat, dog]
+  img_size: 160
+  val_size: 0.1
+  test_size: 0.1
+  random_seed: 42
+  num_workers: 2
+
+augmentation:
+  horizontal_flip: true
+  rotation_degrees: 10
+  color_jitter: false
+
+model:
+  type: cnn
+  cnn:
+    filters: [32, 64, 128]
+    activation: relu
+    dropout: 0.3
+  transfer:
+    backbone: resnet18
+    freeze_backbone_epochs: 0
+    pretrained: false
+
+training:
+  epochs: 8
+  batch_size: 64
+  learning_rate: 0.01
+  optimizer: sgd
+  weight_decay: 0.0001
+  momentum: 0.9
+  checkpoint_name: best.pt

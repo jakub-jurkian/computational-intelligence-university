@@ -1,0 +1,6 @@
+{
+  "best_experiment": "transfer_resnet18",
+  "best_test_acc": 0.9308,
+  "comparison_csv": "reports\\comparisons\\cats_dogs\\comparison.csv",
+  "comparison_plot": "reports\\comparisons\\cats_dogs\\comparison_test_acc.png"
+}

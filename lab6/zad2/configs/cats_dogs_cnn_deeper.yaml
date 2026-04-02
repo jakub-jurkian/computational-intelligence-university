@@ -1,0 +1,40 @@
+project_name: cats-dogs-cnn
+experiment_name: cnn_deeper_leakyrelu
+
+paths:
+  dataset_dir: data/raw/dogs-cats-mini
+  report_dir: reports/cnn_deeper_leakyrelu
+  model_dir: models/cnn_deeper_leakyrelu
+
+data:
+  class_names: [cat, dog]
+  img_size: 160
+  val_size: 0.1
+  test_size: 0.1
+  random_seed: 42
+  num_workers: 2
+
+augmentation:
+  horizontal_flip: true
+  rotation_degrees: 20
+  color_jitter: true
+
+model:
+  type: cnn
+  cnn:
+    filters: [32, 64, 128, 256]
+    activation: leaky_relu
+    dropout: 0.5
+  transfer:
+    backbone: resnet18
+    freeze_backbone_epochs: 0
+    pretrained: false
+
+training:
+  epochs: 10
+  batch_size: 64
+  learning_rate: 0.001
+  optimizer: adam
+  weight_decay: 0.0003
+  momentum: 0.9
+  checkpoint_name: best.pt

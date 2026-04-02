@@ -1,0 +1,6 @@
+a) Krótki opis źródeł i podejścia: odp.md
+b) Loader, etykiety cat/dog, podział, transformacje: data.py
+c) CNN od zera + trening: models.py, trainer.py, run_cats_dogs.py
+d) Walidacja, krzywe, błędne klasyfikacje: transfer_resnet18, odp.md
+e) Kilka konfiguracji + wybór najlepszej: configs, comparison.csv, compare_cats_dogs.py
+f) Transfer learning vs od zera: cats_dogs_transfer_resnet18.yaml, comparison.csv, odp.md

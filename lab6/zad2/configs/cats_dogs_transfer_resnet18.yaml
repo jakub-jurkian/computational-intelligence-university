@@ -1,0 +1,40 @@
+project_name: cats-dogs-cnn
+experiment_name: transfer_resnet18
+
+paths:
+  dataset_dir: data/raw/dogs-cats-mini
+  report_dir: reports/transfer_resnet18
+  model_dir: models/transfer_resnet18
+
+data:
+  class_names: [cat, dog]
+  img_size: 224
+  val_size: 0.1
+  test_size: 0.1
+  random_seed: 42
+  num_workers: 2
+
+augmentation:
+  horizontal_flip: true
+  rotation_degrees: 10
+  color_jitter: false
+
+model:
+  type: transfer
+  cnn:
+    filters: [32, 64, 128]
+    activation: relu
+    dropout: 0.3
+  transfer:
+    backbone: resnet18
+    freeze_backbone_epochs: 2
+    pretrained: true
+
+training:
+  epochs: 6
+  batch_size: 32
+  learning_rate: 0.0003
+  optimizer: adam
+  weight_decay: 0.0001
+  momentum: 0.9
+  checkpoint_name: best.pt

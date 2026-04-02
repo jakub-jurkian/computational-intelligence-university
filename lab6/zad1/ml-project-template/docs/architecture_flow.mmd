@@ -1,0 +1,30 @@
+flowchart LR
+    CFG[configs/]
+    CLI[src/cli/]
+    EXP[src/experiments/]
+
+    DIN[data/raw + data/processed\nWEJSCIE]
+    MOUT[models/\nWYJSCIE]
+    ROUT[reports/\nWYJSCIE]
+    TESTS[tests/]
+
+    CFG --> CLI
+    CLI --> EXP
+    DIN --> EXP
+
+    EXP --> FETCH[fetch]
+    FETCH --> PRE[preprocess]
+    PRE --> TRAIN[train]
+    TRAIN --> EVAL[evaluate]
+    EVAL --> VIZ[visualize]
+    VIZ --> CMP[compare]
+
+    PRE --> DIN
+    TRAIN --> MOUT
+    EVAL --> ROUT
+    VIZ --> ROUT
+    CMP --> ROUT
+
+    TESTS -. weryfikuja .-> CLI
+    TESTS -. weryfikuja .-> EXP
+    TESTS -. weryfikuja .-> CFG
